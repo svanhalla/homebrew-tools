@@ -5,20 +5,20 @@
 class MyToolBrew < Formula
   desc ""
   homepage "https://github.com/svanhalla/homebrew-tools"
-  version "0.0.1"
+  version "0.0.2"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/svanhalla/my-tool/releases/download/0.0.1/my-tool_Darwin_x86_64.tar.gz"
-      sha256 "dac85b474b15185c8f96c5b91ba6d0cb3919439cec8483d1a0c933166366b06f"
+      url "https://github.com/svanhalla/my-tool/releases/download/v0.0.2/my-tool_Darwin_x86_64.tar.gz"
+      sha256 "03fca867b9c98d2bfed525d3022eccc37596f67887ee2f1f41371d5224e0c7e5"
 
       def install
         bin.install "my-tool"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/svanhalla/my-tool/releases/download/0.0.1/my-tool_Darwin_arm64.tar.gz"
-      sha256 "75c7a00e85ed973564373ec24ceab62cfc92da457853f098840ccf61977dfb2e"
+      url "https://github.com/svanhalla/my-tool/releases/download/v0.0.2/my-tool_Darwin_arm64.tar.gz"
+      sha256 "0e6c83c234fd93e01c5d04f5a9a0cfd8697f05c4ad43ec75249c837566881954"
 
       def install
         bin.install "my-tool"
@@ -28,16 +28,16 @@ class MyToolBrew < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/svanhalla/my-tool/releases/download/0.0.1/my-tool_Linux_x86_64.tar.gz"
-      sha256 "fbe8702c34a9238d2208528447dc0480662be4943e032cd397a10f7270f6efa2"
+      url "https://github.com/svanhalla/my-tool/releases/download/v0.0.2/my-tool_Linux_x86_64.tar.gz"
+      sha256 "d4fd70e3865558caffc74dd12f5bfe2c2f44f07b5d27d3e7f15fa7a232e4af12"
 
       def install
         bin.install "my-tool"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/svanhalla/my-tool/releases/download/0.0.1/my-tool_Linux_arm64.tar.gz"
-      sha256 "57aa492e8737d5df8ebb11232d92b236b98b1f7ae3af66a9b37c05f4c7e47c7f"
+      url "https://github.com/svanhalla/my-tool/releases/download/v0.0.2/my-tool_Linux_arm64.tar.gz"
+      sha256 "e65eeb2370d489cf9e26b80c67e4101e254e4cfd4748290826e07fc70aaf6c50"
 
       def install
         bin.install "my-tool"
