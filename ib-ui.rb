@@ -5,20 +5,20 @@
 class IbUi < Formula
   desc ""
   homepage "https://github.com/svanhalla/homebrew-tools"
-  version "0.0.1"
+  version "0.0.2"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/svanhalla/ib-ui/releases/download/v0.0.1/ib-ui_Darwin_x86_64.tar.gz"
-      sha256 "dd64d926854ea1f30e8398efe862ff2efacfed02e2ee60c0faa93717082d1bff"
+    if Hardware::CPU.arm?
+      url "https://github.com/svanhalla/ib-ui/releases/download/v0.0.2/ib-ui_Darwin_arm64.tar.gz"
+      sha256 "14236f9d2e5df21f1c94fae18278bcea4d85054b4c630a935aa0abd991512e5f"
 
       def install
         bin.install "ib-ui"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/svanhalla/ib-ui/releases/download/v0.0.1/ib-ui_Darwin_arm64.tar.gz"
-      sha256 "3aa4927b96e1d3d8a9cfebca5d537b2920a275d5539eb925bf2e31cc10dc75f6"
+    if Hardware::CPU.intel?
+      url "https://github.com/svanhalla/ib-ui/releases/download/v0.0.2/ib-ui_Darwin_x86_64.tar.gz"
+      sha256 "deef600b660120a5a069ed101469bec9509cc73066a155c3e3bad274166d39a5"
 
       def install
         bin.install "ib-ui"
@@ -28,16 +28,16 @@ class IbUi < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/svanhalla/ib-ui/releases/download/v0.0.1/ib-ui_Linux_arm64.tar.gz"
-      sha256 "09ff4b4902fad7dc64caf6a72520a9fb4271e585481a714164fd511da7d4d4cc"
+      url "https://github.com/svanhalla/ib-ui/releases/download/v0.0.2/ib-ui_Linux_arm64.tar.gz"
+      sha256 "377dada8b5bc78410abe5d57589ef1fff37da29407d04b1c4765e04096c2c676"
 
       def install
         bin.install "ib-ui"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/svanhalla/ib-ui/releases/download/v0.0.1/ib-ui_Linux_x86_64.tar.gz"
-      sha256 "62291a4a6f6f17e7fcd96019281198ac6683652c3c99010eca857a3489eca274"
+      url "https://github.com/svanhalla/ib-ui/releases/download/v0.0.2/ib-ui_Linux_x86_64.tar.gz"
+      sha256 "1904095e8e4c1550a9656dd4c95e34c2093f6cac526eb479506ebdfe9d2a8608"
 
       def install
         bin.install "ib-ui"
