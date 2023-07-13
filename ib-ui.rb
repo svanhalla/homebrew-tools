@@ -5,20 +5,20 @@
 class IbUi < Formula
   desc ""
   homepage "https://github.com/svanhalla/homebrew-tools"
-  version "0.0.2"
+  version "0.0.1"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/svanhalla/ib-ui/releases/download/v0.0.2/ib-ui_Darwin_arm64.tar.gz"
-      sha256 "14236f9d2e5df21f1c94fae18278bcea4d85054b4c630a935aa0abd991512e5f"
+      url "https://github.com/svanhalla/ib-ui/releases/download/v0.0.1/ib-ui_Darwin_arm64.tar.gz"
+      sha256 "f975623db725e88cfe4e155b2fe66581241fa1372d763b1fc0eb5641e81e5020"
 
       def install
         bin.install "ib-ui"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/svanhalla/ib-ui/releases/download/v0.0.2/ib-ui_Darwin_x86_64.tar.gz"
-      sha256 "deef600b660120a5a069ed101469bec9509cc73066a155c3e3bad274166d39a5"
+      url "https://github.com/svanhalla/ib-ui/releases/download/v0.0.1/ib-ui_Darwin_x86_64.tar.gz"
+      sha256 "45c97ff0a6d7aa6c36a67dd252d7097ef0dc56184fb236f914404f60bd343c71"
 
       def install
         bin.install "ib-ui"
@@ -28,16 +28,16 @@ class IbUi < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/svanhalla/ib-ui/releases/download/v0.0.2/ib-ui_Linux_arm64.tar.gz"
-      sha256 "377dada8b5bc78410abe5d57589ef1fff37da29407d04b1c4765e04096c2c676"
+      url "https://github.com/svanhalla/ib-ui/releases/download/v0.0.1/ib-ui_Linux_arm64.tar.gz"
+      sha256 "d5e7c31f6c48fe5c4fa9c1bd7cd7891056a83d78f56dc2c8afd2c7596bce503b"
 
       def install
         bin.install "ib-ui"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/svanhalla/ib-ui/releases/download/v0.0.2/ib-ui_Linux_x86_64.tar.gz"
-      sha256 "1904095e8e4c1550a9656dd4c95e34c2093f6cac526eb479506ebdfe9d2a8608"
+      url "https://github.com/svanhalla/ib-ui/releases/download/v0.0.1/ib-ui_Linux_x86_64.tar.gz"
+      sha256 "46b2b89f6419d818f92302373cbda1f6df8d0756697c0a734d060fb43197bb55"
 
       def install
         bin.install "ib-ui"
