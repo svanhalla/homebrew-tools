@@ -1,7 +1,7 @@
 class SvanhallaCli < Formula
   desc "Svanhalla CLI reklamprogram"
   homepage "https://github.com/svanhalla/svanhalla-cli"
-  url "https://github.com/svanhalla/svanhalla-cli/archive/v1.0.2.tar.gz"
+  url "https://github.com/svanhalla/svanhalla-cli/archive/v1.0.4.tar.gz"
   sha256 "0019dfc4b32d63c1392aa264aed2253c1e0c2fb09216f8e2cc269bbfb8bb49b5"
   license "MIT"
 
@@ -13,6 +13,6 @@ class SvanhallaCli < Formula
   end
 
   test do
-    assert_match "svanhalla-cli v1.0.2", shell_output("#{bin}/svanhalla-cli version")
+    assert_match "svanhalla-cli v1.0.4", shell_output("#{bin}/svanhalla-cli version")
   end
 end
