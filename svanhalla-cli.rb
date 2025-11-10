@@ -5,20 +5,20 @@
 class SvanhallaCli < Formula
   desc "Svanhalla CLI reklamprogram"
   homepage "https://github.com/svanhalla/svanhalla-releases"
-  version "1.2.7"
+  version "1.2.8"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/svanhalla/svanhalla-releases/releases/download/v1.2.7/svanhalla-cli-darwin-amd64.tar.gz"
-      sha256 "9a0b80e71350a20d0d95a3acaa0268d5e75ac994bd7514357f0240bfdccd655f"
+      url "https://github.com/svanhalla/svanhalla-releases/releases/download/v1.2.8/svanhalla-cli-darwin-amd64.tar.gz"
+      sha256 "967c22da79f12230b6ab5d283cdc03f3fc52de0b7987f6700693c24eb61bf27c"
 
       def install
         bin.install "svanhalla-cli"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/svanhalla/svanhalla-releases/releases/download/v1.2.7/svanhalla-cli-darwin-arm64.tar.gz"
-      sha256 "7cb84d9c595c754f631a3218f4005c86e982dd87f21821c22970b2b431c53cb9"
+      url "https://github.com/svanhalla/svanhalla-releases/releases/download/v1.2.8/svanhalla-cli-darwin-arm64.tar.gz"
+      sha256 "2cdc4d7ebc91933428feeec50dbacbfa7c08b6a4a988e0c1fb015f8cb7ebac2a"
 
       def install
         bin.install "svanhalla-cli"
@@ -28,15 +28,15 @@ class SvanhallaCli < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/svanhalla/svanhalla-releases/releases/download/v1.2.7/svanhalla-cli-linux-amd64.tar.gz"
-      sha256 "99346db27f43f7950d9f76e1ff8f196682af095b90cd1661a0a75b26cc62b7e7"
+      url "https://github.com/svanhalla/svanhalla-releases/releases/download/v1.2.8/svanhalla-cli-linux-amd64.tar.gz"
+      sha256 "1834ce05077c12343b73b47bdf5abdd5f161611648228903075480a88415f5d5"
       def install
         bin.install "svanhalla-cli"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/svanhalla/svanhalla-releases/releases/download/v1.2.7/svanhalla-cli-linux-arm64.tar.gz"
-      sha256 "222e57f0dbb21c3b73763fc1ef45d52fe954b3eefb282ae9ce9712c8b1fcc6a5"
+      url "https://github.com/svanhalla/svanhalla-releases/releases/download/v1.2.8/svanhalla-cli-linux-arm64.tar.gz"
+      sha256 "0f836757c8cb53e5384a576b5fca9681816213c825d41908145075135c2f0e01"
       def install
         bin.install "svanhalla-cli"
       end
