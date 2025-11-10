@@ -13,8 +13,17 @@ class SvanhallaCli < Formula
     end
   end
 
+  on_linux do
+    url "https://github.com/svanhalla/svanhalla-releases/releases/download/svanhalla-cli-v1.1.0/svanhalla-cli-linux-amd64"
+    sha256 "b4b230ec7acef0e0ee30e587c3a154e40cbe273a766febee4dc1511c73a02a6f"
+  end
+
   def install
-    bin.install "svanhalla-cli-darwin-#{Hardware::CPU.arch}" => "svanhalla-cli"
+    if OS.mac?
+      bin.install "svanhalla-cli-darwin-#{Hardware::CPU.arch}" => "svanhalla-cli"
+    else
+      bin.install "svanhalla-cli-linux-amd64" => "svanhalla-cli"
+    end
   end
 
   test do
