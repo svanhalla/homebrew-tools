@@ -3,7 +3,7 @@ cask "cheatd" do
   name "cheatd"
   desc "Personal cheat sheet management CLI with web interface"
   homepage "https://github.com/svanhalla/svanhalla-releases"
-  version "1.2.1"
+  version "1.2.2"
 
   livecheck do
     skip "Auto-generated on release."
@@ -15,12 +15,12 @@ cask "cheatd" do
     on_intel do
       url "https://github.com/svanhalla/svanhalla-releases/releases/download/v#{version}/cheatd-darwin-amd64.tar.gz",
         verified: "github.com/svanhalla/svanhalla-releases"
-      sha256 "8d7299652982485d7cd1e2fc61ff9125583c78118a5f7ee165c496ddb07103d4"
+      sha256 "43a3334ff84ef60745ff67093db197007d24509b1f3cbea95276674a6b91eca2"
     end
     on_arm do
       url "https://github.com/svanhalla/svanhalla-releases/releases/download/v#{version}/cheatd-darwin-arm64.tar.gz",
         verified: "github.com/svanhalla/svanhalla-releases"
-      sha256 "3ae91755bdb999f550458144c3d5d67f49ec6cfcb0b72c056698648adb60e6d6"
+      sha256 "8acc908459c22c310226304a9f4bb77485db2679317d9ed73c9d45f5c6e0a5f4"
     end
   end
 
@@ -28,12 +28,12 @@ cask "cheatd" do
     on_intel do
       url "https://github.com/svanhalla/svanhalla-releases/releases/download/v#{version}/cheatd-linux-amd64.tar.gz",
         verified: "github.com/svanhalla/svanhalla-releases"
-      sha256 "4dd8e61854aaf1852b61249a1ab08805956f77bf9ff890f828d1c44b73e029f2"
+      sha256 "f77b32838d22e61ef90983cedc2486e4f2241b42a658e816285e2ff615d0606f"
     end
     on_arm do
       url "https://github.com/svanhalla/svanhalla-releases/releases/download/v#{version}/cheatd-linux-arm64.tar.gz",
         verified: "github.com/svanhalla/svanhalla-releases"
-      sha256 "82027e13d3e286622ee259e16e140793cf9f96b4f43e7bff08439ceeca0697ac"
+      sha256 "6f989410b9c2cbac65d0866b68946ed84b5910adaa6c4fd561a02f9ee449cb97"
     end
   end
 
