@@ -5,20 +5,20 @@
 class Cheatd < Formula
   desc "Personal cheat sheet management CLI with web interface"
   homepage "https://github.com/svanhalla/svanhalla-releases"
-  version "1.1.3"
+  version "1.1.5"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/svanhalla/svanhalla-releases/releases/download/v1.1.3/cheatd-darwin-amd64.tar.gz"
-      sha256 "faffb099a9227125c9e0eb2c0a01528c2fe0c2fc7bc4e7f6894569a5f5aac637"
+      url "https://github.com/svanhalla/svanhalla-releases/releases/download/v1.1.5/cheatd-darwin-amd64.tar.gz"
+      sha256 "11775b472f5f138b8665c9552a63c5be0a6a0ffaa969fc07e7c794f15a4c49fe"
 
       def install
         bin.install "cheatd"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/svanhalla/svanhalla-releases/releases/download/v1.1.3/cheatd-darwin-arm64.tar.gz"
-      sha256 "f865e72fd2e057cf472ad599d87d67cb0fa70054e96e0072f44de9a296586d8d"
+      url "https://github.com/svanhalla/svanhalla-releases/releases/download/v1.1.5/cheatd-darwin-arm64.tar.gz"
+      sha256 "bc6938f47e50ef4e14b1537c3cd370c86b9d55bce9cc036dc7cdf4f0a32ee974"
 
       def install
         bin.install "cheatd"
@@ -28,15 +28,15 @@ class Cheatd < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/svanhalla/svanhalla-releases/releases/download/v1.1.3/cheatd-linux-amd64.tar.gz"
-      sha256 "a092e0391bfc5edb1e18fef06c325eee8a74e4a1460e65a78a0d52902b17d6c8"
+      url "https://github.com/svanhalla/svanhalla-releases/releases/download/v1.1.5/cheatd-linux-amd64.tar.gz"
+      sha256 "897532939af4808bf63b8c8a4f9a09f7749d9c09827e0ed3be2ea9b80924c95b"
       def install
         bin.install "cheatd"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/svanhalla/svanhalla-releases/releases/download/v1.1.3/cheatd-linux-arm64.tar.gz"
-      sha256 "45d182d96545c89ff27e425fbc82de349b4ba8c53cb621b3e405f088f441a387"
+      url "https://github.com/svanhalla/svanhalla-releases/releases/download/v1.1.5/cheatd-linux-arm64.tar.gz"
+      sha256 "4bd603d586f8f8874e56cbd89560bee9ffc9fb3010766ff99847b5d65e94c386"
       def install
         bin.install "cheatd"
       end
