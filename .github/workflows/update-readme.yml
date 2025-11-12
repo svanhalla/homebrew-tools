@@ -1,0 +1,83 @@
+name: Update README
+
+on:
+  push:
+    paths:
+      - 'Casks/*.rb'
+  workflow_dispatch:
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          
+      - name: Update README with current tool versions
+        run: |
+          # Extract tool information from Cask files
+          echo "| Tool | Version | Description |" > tools_table.md
+          echo "|------|---------|-------------|" >> tools_table.md
+          
+          for cask_file in Casks/*.rb; do
+            if [ -f "$cask_file" ]; then
+              # Extract name, version, and description
+              name=$(grep -o 'cask "[^"]*"' "$cask_file" | sed 's/cask "\(.*\)"/\1/')
+              version=$(grep -o 'version "[^"]*"' "$cask_file" | sed 's/version "\(.*\)"/v\1/')
+              desc=$(grep -o 'desc "[^"]*"' "$cask_file" | sed 's/desc "\(.*\)"/\1/')
+              
+              if [ -n "$name" ] && [ -n "$version" ] && [ -n "$desc" ]; then
+                echo "| **$name** | $version | $desc |" >> tools_table.md
+              fi
+            fi
+          done
+          
+          # Generate installation commands
+          echo "" >> tools_table.md
+          for cask_file in Casks/*.rb; do
+            if [ -f "$cask_file" ]; then
+              name=$(grep -o 'cask "[^"]*"' "$cask_file" | sed 's/cask "\(.*\)"/\1/')
+              if [ -n "$name" ]; then
+                echo "### $name" >> tools_table.md
+                echo '```bash' >> tools_table.md
+                echo "brew install --cask svanhalla/tools/$name" >> tools_table.md
+                echo '```' >> tools_table.md
+                echo "" >> tools_table.md
+              fi
+            fi
+          done
+          
+          # Update README.md
+          awk '
+          BEGIN { in_tools_section = 0; tools_printed = 0 }
+          /^## Available Tools$/ { 
+            print $0
+            print ""
+            in_tools_section = 1
+            while ((getline line < "tools_table.md") > 0) {
+              print line
+            }
+            close("tools_table.md")
+            tools_printed = 1
+            next
+          }
+          /^## / && in_tools_section && tools_printed { in_tools_section = 0 }
+          !in_tools_section || !tools_printed { print $0 }
+          ' README.md > README_new.md
+          
+          mv README_new.md README.md
+          rm tools_table.md
+          
+      - name: Commit changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          
+          if git diff --quiet README.md; then
+            echo "No changes to README.md"
+          else
+            git add README.md
+            git commit -m "Auto-update README with current tool versions"
+            git push
+          fi
