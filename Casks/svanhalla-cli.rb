@@ -3,7 +3,7 @@ cask "svanhalla-cli" do
   name "svanhalla-cli"
   desc "Svanhalla CLI reklamprogram"
   homepage "https://github.com/svanhalla/svanhalla-releases"
-  version "1.2.14"
+  version "1.2.15"
 
   livecheck do
     skip "Auto-generated on release."
@@ -15,12 +15,12 @@ cask "svanhalla-cli" do
     on_intel do
       url "https://github.com/svanhalla/svanhalla-releases/releases/download/v#{version}/svanhalla-cli-darwin-amd64.tar.gz",
         verified: "github.com/svanhalla/svanhalla-releases"
-      sha256 "47c4881281c2a03bfd88037837ffea40fe5fe77c9459cdedd3a9b8ab2626e0fd"
+      sha256 "b137a7a39c05979dd4486cf8dac134afd0d93aa349139f0e1e13e270c29d2a30"
     end
     on_arm do
       url "https://github.com/svanhalla/svanhalla-releases/releases/download/v#{version}/svanhalla-cli-darwin-arm64.tar.gz",
         verified: "github.com/svanhalla/svanhalla-releases"
-      sha256 "a08ac6c9dc7094af664372ad70c773a3a5f6ef87350f5063097ac258ac737f7a"
+      sha256 "e8017591719254263509d3cc1cd2fde2f1b60652a8de872cdd2942b93a9cd54f"
     end
   end
 
@@ -28,12 +28,12 @@ cask "svanhalla-cli" do
     on_intel do
       url "https://github.com/svanhalla/svanhalla-releases/releases/download/v#{version}/svanhalla-cli-linux-amd64.tar.gz",
         verified: "github.com/svanhalla/svanhalla-releases"
-      sha256 "4d1a022597381830a01566e138517801ae14fe833b923f3f07278083fc20b508"
+      sha256 "2db11a66be1c7acead481bcb67452139d393a7fbdcf9fd558a0c6e1d7b154bc5"
     end
     on_arm do
       url "https://github.com/svanhalla/svanhalla-releases/releases/download/v#{version}/svanhalla-cli-linux-arm64.tar.gz",
         verified: "github.com/svanhalla/svanhalla-releases"
-      sha256 "02a4ce33bd9351cbaade2863abdd28913da4ecb26ef35096dee37f727b4819b6"
+      sha256 "7d03ebfb68926fcce69cc607b1a8e6744a81afef794ae7cf71a858c2f568e3cc"
     end
   end
 
