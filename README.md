@@ -19,7 +19,7 @@ brew install --cask <tool-name>
 | Tool | Version | Description |
 |------|---------|-------------|
 | **cheatd** | v1.3.7 | Personal cheat sheet management CLI with web interface |
-| **svanhalla-cli** | v1.2.14 | Svanhalla CLI reklamprogram |
+| **svanhalla-cli** | v1.2.15 | Svanhalla CLI reklamprogram |
 
 ### cheatd
 ```bash
