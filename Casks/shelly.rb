@@ -3,7 +3,7 @@ cask "shelly" do
   name "shelly"
   desc "Modern CLI for controlling Shelly smart devices"
   homepage "https://github.com/svanhalla/svanhalla-releases"
-  version "1.3.0"
+  version "1.4.0"
 
   livecheck do
     skip "Auto-generated on release."
@@ -15,12 +15,12 @@ cask "shelly" do
     on_intel do
       url "https://github.com/svanhalla/svanhalla-releases/releases/download/v#{version}/shelly-darwin-amd64.tar.gz",
         verified: "github.com/svanhalla/svanhalla-releases"
-      sha256 "d35d6a20f3c4c972857f042f5a094d98c3a9e83f191fcb144444cde81db781c3"
+      sha256 "1342466bf8c1232968ad6bb334a6829af6063b753c03aa9030cfac56a9d15103"
     end
     on_arm do
       url "https://github.com/svanhalla/svanhalla-releases/releases/download/v#{version}/shelly-darwin-arm64.tar.gz",
         verified: "github.com/svanhalla/svanhalla-releases"
-      sha256 "d5b6caa35c4268c72304330fa99e09ca49551e801efab6ed878364621f8b5711"
+      sha256 "cdd2414a0df8a53535176a66fae4321fed5cad907b6fbd1c8d07130aa3c1f21c"
     end
   end
 
@@ -28,12 +28,12 @@ cask "shelly" do
     on_intel do
       url "https://github.com/svanhalla/svanhalla-releases/releases/download/v#{version}/shelly-linux-amd64.tar.gz",
         verified: "github.com/svanhalla/svanhalla-releases"
-      sha256 "fad5951a5ca1a2181571604de7540569ff84f510410f64c807bc0189ff9e335e"
+      sha256 "f58739945dce7beed2bc47c8c569d448b58f71fb78b8fb8fd7f047af2b1d7cf0"
     end
     on_arm do
       url "https://github.com/svanhalla/svanhalla-releases/releases/download/v#{version}/shelly-linux-arm64.tar.gz",
         verified: "github.com/svanhalla/svanhalla-releases"
-      sha256 "526bd3dd9a30c4129b7d44ca0503fe0960afea839cf19ba792786253d2179ebc"
+      sha256 "ce833775b725141172dbfaab7d46b6cd1687f65913af209f658441c545f8b04f"
     end
   end
 
