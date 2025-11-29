@@ -14,7 +14,7 @@ brew install --cask svanhalla/tools/<tool-name>
 | Tool | Version | Description |
 |------|---------|-------------|
 | **cheatd** | v1.3.8 | Personal cheat sheet management CLI with web interface |
-| **shelly** | v1.2.1 | Modern CLI for controlling Shelly smart devices |
+| **shelly** | v1.3.0 | Modern CLI for controlling Shelly smart devices |
 | **svanhalla-cli** | v1.2.15 | Svanhalla CLI reklamprogram |
 
 ### cheatd
